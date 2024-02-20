@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-$END$
+
+<div id="taskForm">
+    <input type="text" id="taskTitle" placeholder="Jmenotasku">
+    <input type="date" id="datum" placeholder="datum">
+    <select id="howhardcanitbe">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+    </select>
+    <button onclick="addTask()">Add Task</button>
+</div>
+
+<ul id="taskList"></ul>
+
+
+
 </body>
+<script src="index.js"></script>
 </html>
