@@ -1,16 +1,15 @@
-function addTask() {
+document.getElementById('taskForm').addEventListener('submit', function(event) {
+
     let title = document.getElementById('taskTitle').value;
-    let priority = document.getElementById("howhardcanitbe").value;
+    let priority = document.getElementById('taskPriority').value;
+    let date = document.getElementById('taskDate').value;
+    let taskItem = document.createElement('li');
+    taskItem.classList.add('task-list-item');
+    taskItem.textContent = `${title} - Priorita: ${priority}, Datum: ${date}`;
 
 
-    let list = document.getElementById('taskList');
-    let date = document.getElementById('date');
-    let li = document.createElement('li');
-    li.className = 'task-item ' + " " + " ";
-    li.innerText = title + " - " + priority.charAt(0).toUpperCase() + priority.slice(1);
+    document.getElementById('taskList').appendChild(taskItem);
 
-    list.appendChild(li);
-    
 
-    document.getElementById('taskTitle').value = '';
-}
+    document.getElementById('taskForm').reset();
+});
